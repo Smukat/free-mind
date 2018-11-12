@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="container">
+        {/*The BrowserRouter allows me to create an url for each component of the App. I create a basename
+        based on the github subpages. */}
+        <BrowserRouter basename="/free&#45;mind">
+        {/* Switch goes through each Route looking for the specific path. If the first one isn't, it checks the
+        second one, etc. The default case is the one without path. */}
+          <Switch>
+            <Route exact path="/" component={Home}  />
+            <Route component={NotFound} />
+          </Switch>
+
+        </BrowserRouter>
       </div>
+
     );
   }
 }

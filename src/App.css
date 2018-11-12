@@ -1,32 +1,61 @@
-.App {
+/* Components */
+@import url("css/reset.css");
+@import url("css/accessibility.css");
+@import url("css/typography.css");
+
+/*--------------------------------------------------------------
+General styles
+--------------------------------------------------------------*/
+
+/* NotFound Component
+ **********************/
+ .not-found {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+/* Navbar Component
+ **********************/
+ .navbar-style {
+ }
+
+ /* Title of section
+ **********************/
+
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+@supports not (display: grid) {
+	.site {
+		max-width: 50em;
+		margin: 0 auto;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@supports (grid-area: auto) {
+	@media screen and (min-width: 50em) {
+		.site {
+			max-width: none;
+			display: grid
+		}
+	}
+
+
+	/*Bigger Screens */
+
+	@media screen and (min-width: 65em) {
+		.site {
+			/*GRID*/
+
+		}
+	}
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

@@ -1,10 +1,14 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const Navbar = ()=> {
     return (
-        <div className="navbar-style">
+        <nav className="navbar-style">
             <p>freeMind</p>
-        </div>
+            <button className="addButton">+</button>
+            <FontAwesomeIcon icon="faStroopwafel" />
+        </nav>
     );
 }
 

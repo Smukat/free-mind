@@ -1,11 +1,14 @@
 import React from 'react';
 import Navbar from './Navbar';
+import SecondaryNavbar from './SecondaryNavbar';
+
 
 const Header = () => {
 	return (
-			<div>
-				<Navbar />
-			</div>
+		<div>
+			<Navbar />
+			<SecondaryNavbar />
+		</div>
 	);
 }
 

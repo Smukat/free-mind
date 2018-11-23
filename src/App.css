@@ -6,18 +6,41 @@
 /*--------------------------------------------------------------
 General styles
 --------------------------------------------------------------*/
+img {
+	display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
 
+.addButton-style {
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+}
 /* NotFound Component
  **********************/
  .not-found {
   text-align: center;
 }
 
+
 /* Navbar Component
  **********************/
- .navbar-style {
+ .ui.right.floated.menu {
+	 margin: 1rem 0 0 .5rem;
  }
 
+ /* NoTask Main
+ **********************/
+ .relaxGirl-img {
+	padding: 1em 0 1em 0;
+ }
+ .noTask-p {
+	 text-align: center;
+	 font-size: 25px;
+	 padding-bottom: 1em;
+ }
  /* Title of section
  **********************/
 
@@ -27,8 +50,8 @@ If no grid support, limit width to 50em and center align
 --------------------------------------------------------------*/
 @supports not (display: grid) {
 	.site {
-		max-width: 50em;
-		margin: 0 auto;
+		/* max-width: 50em;
+		margin: 0 auto; */
 	}
 }
 
@@ -41,19 +64,26 @@ CSS Grid layout for wider screens, when browser supports grid:
 @supports (grid-area: auto) {
 	@media screen and (min-width: 50em) {
 		.site {
-			max-width: none;
-			display: grid
+			max-width: 50em;
+			margin: 0 auto;
 		}
+		.addButton-style {
+			right: calc(50% - 22em);
+		}
+		img {
+			width: 70%;
+			margin: 0 auto;
+		}
+
 	}
 
 
 	/*Bigger Screens */
 
 	@media screen and (min-width: 65em) {
-		.site {
-			/*GRID*/
 
-		}
+
+
 	}
 }
 

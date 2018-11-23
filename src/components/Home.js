@@ -1,9 +1,21 @@
 import React from 'react';
 import Header from './Header';
-
+import AddButton from './AddButton';
+import NoTaskMain from './NoTaskMain';
+import Main from './Main';
+import { Consumer } from './Context/indexContext';
 const Home = () => {
-    return (
-    <Header />
+	return (
+		<Consumer>
+			{({ notes }) => (
+				<div>
+					<Header />
+					<AddButton />
+					{(notes.length > 0) ? <Main /> : <NoTaskMain /> }
+				</div>
+			)}
+		</Consumer>
+
 );
 }
 

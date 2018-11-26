@@ -7,7 +7,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    notes: []
+    notes: ["Hello one", "Hello two"]
   }
 
   render() {

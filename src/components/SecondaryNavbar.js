@@ -24,7 +24,7 @@ export default class SecondaryNavbar extends Component {
           active={activeItem === 'today'}
           onClick={this.handleItemClick}
         >
-          Today
+          Now
         </Menu.Item>
 
         <Menu.Item

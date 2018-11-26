@@ -17,13 +17,13 @@ img {
 	position: fixed;
 	bottom: 1em;
 	right: 1em;
+	z-index: 10;
 }
 /* NotFound Component
  **********************/
  .not-found {
   text-align: center;
 }
-
 
 /* Navbar Component
  **********************/
@@ -41,9 +41,28 @@ img {
 	 font-size: 25px;
 	 padding-bottom: 1em;
  }
+
+ /* Note Compontent
+ **********************/
+ .note-style {
+	 padding: 1em 0 1em 0;
+ }
+
+ /* AddTask Componenet
+ **********************/
+.addTask-style {
+	padding: 2em 0 2em 0;
+}
+
+.field{
+	padding: 1.2em 0 1.2em 0;
+}
+
+.ui.form .inline.fields {
+	margin: 0 0 2em;
+}
  /* Title of section
  **********************/
-
 
 /*--------------------------------------------------------------
 If no grid support, limit width to 50em and center align
@@ -73,6 +92,15 @@ CSS Grid layout for wider screens, when browser supports grid:
 		img {
 			width: 70%;
 			margin: 0 auto;
+		}
+
+		.note-style {
+			max-width: 80%;
+			margin: 0 auto;
+
+		}
+		.main-notes {
+			margin-top: 1em;
 		}
 
 	}

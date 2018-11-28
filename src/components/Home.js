@@ -3,6 +3,7 @@ import Header from './Header';
 import AddButton from './AddButton';
 import NoTaskMain from './NoTaskMain';
 import Main from './Main';
+import Note from './Note';
 
 import { Consumer } from './Context/indexContext';
 const Home = () => {

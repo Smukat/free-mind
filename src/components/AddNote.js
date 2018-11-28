@@ -2,16 +2,12 @@ import React, { Component} from 'react';
 import { Button, Checkbox, Form, Container, Header, Radio, Input, TextArea } from 'semantic-ui-react';
 
 export default class AddNote extends Component {
-/* the state valuePriority will hold 3 possibilities:
-		1: "Priority NOW",
-		2: "Priority LATER",
-		3: DONE */
 	state = {}
 
-	handleChange = (e, { valuePriority }) => this.setState({ valuePriority });
+	handleChange = (e, { value }) => this.setState({ value });
 
 	render() {
-		const { valuePriority } = this.state;
+		const { value } = this.state;
 
 		return (
 			<Container className="addTask-style">
@@ -29,15 +25,15 @@ export default class AddNote extends Component {
           <Form.Field
             control={Radio}
             label='Now'
-            value='1'
-            checked={valuePriority === '1'}
+            value='now'
+            checked={value === 'now'}
             onChange={this.handleChange}
           />
           <Form.Field
             control={Radio}
             label='Later'
-            value='2'
-            checked={valuePriority === '2'}
+            value='later'
+            checked={value === 'later'}
             onChange={this.handleChange}
           />
 				</Form.Group>

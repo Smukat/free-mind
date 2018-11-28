@@ -8,6 +8,7 @@ const ButtonExampleCircular = () =>
         size='big'
         color="blue"
         className="addButton-style" />}
-    content='Add a new task' />
+    content='Add a new task'
+    position="left center" />
 
 export default ButtonExampleCircular

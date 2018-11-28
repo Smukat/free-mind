@@ -7,7 +7,25 @@ import './App.css';
 
 class App extends Component {
   state = {
-    notes: ["Hello one", "Hello two"]
+    /* Priority: "red" means now, and "teal" means later */
+    notes: [
+      {
+        title: "Buy milk",
+        description: "2%",
+        priority: "later",
+        id: 1
+      },
+      {
+        title: "Buy supplies for the party",
+        description: "coke, redbull, alcohol, chips",
+        priority: "now",
+        id: 2
+      }
+  ]
+  }
+
+  changePriority = () => {
+    
   }
 
   render() {

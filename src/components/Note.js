@@ -5,12 +5,18 @@ export default class Note extends Component {
 	state = {}
 
 	render() {
+		const { priority, title, description } = this.props;
+		//If priority is now the color of the label will be red, otherwise teal.
+		const color = (priority === "now") ? "red" 
+		: (priority === "later") ? "teal" : "grey";
+		
+		const priorityLabel = priority.charAt(0).toUpperCase() + priority.slice(1);
 		return (
 			<div className="note-style">
 				{/*Label button */}
-				<Segment raised color="red">
-					<Label as='a' color='red' ribbon>
-						Now
+				<Segment raised color={color}>
+					<Label as='a' color={color} ribbon>
+						{priorityLabel}
 					</Label>
 					{/*Settings Button */}
 					<Popup
@@ -33,10 +39,8 @@ export default class Note extends Component {
 						on='click'
 						position='left center'
 					/>
-					<h3>Title of Note</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<h3>{title}</h3>
+					<p>{description}</p>
 				</Segment>
 
 			    {/* <Header as='h2' attached='top'>
